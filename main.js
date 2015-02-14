@@ -6,6 +6,7 @@ $(function(){
     canvas.height = window.innerHeight;
     canvas.style.display = 'block';
     ctx.fillStyle = color;
+    ctx.translate(0.5, 0.5);
     ctx.lineWidth = .1;
     ctx.strokeStyle = color;
 
@@ -15,7 +16,7 @@ $(function(){
     };
 
     var dots = {
-        nb: canvas.width / 10,
+        nb: 250,
         distance: 100,
         d_radius: 150,
         array: []
