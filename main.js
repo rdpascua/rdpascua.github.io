@@ -30,7 +30,7 @@ $(function(){
     };
 
     var dots = {
-        nb: 300,
+        nb: 150,
         distance: 100,
         d_radius: 150,
         array: []
