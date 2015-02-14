@@ -78,9 +78,34 @@ canvas{
     padding: 10px;
     font-size: 18px;
     line-height: 25px;
+    display: inline-block;
+    width: 640px;
 }
 
 .container > .desc > .pre {
     font-family: monospace, "Courier New", "Lucida Console";
     font-size: 10px;
+    width: 100%;
+    display: block;
+}
+
+@media only screen and (max-width: 480px) {
+  /*  canvas {
+        display: none!important;
+    }*/
+    .avatar {
+        width: 150px;
+        height: 150px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1em;
+    }
+    .container > .desc p {
+        font-size: 15px;
+        line-height: 25px;
+        width: auto;
+    }
 }

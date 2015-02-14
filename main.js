@@ -1,18 +1,3 @@
-//TIMESTAMP
-(function() {
-  setInterval(function() {
-    var now, timestamp;
-    timestamp = new Date(1987, 5, 30);
-    now = new Date();
-    return $('#time').text(((now - timestamp) / 1000).toFixed(0));
-  }, 1000);
-}).call(this);
-
-$(window).on('resize', function(){
-  reinit();
-});
-
-//CANVAS
 $(function(){
     var canvas = document.querySelector('canvas'),
       ctx = canvas.getContext('2d'),
@@ -30,7 +15,7 @@ $(function(){
     };
 
     var dots = {
-        nb: 150,
+        nb: canvas.width / 10,
         distance: 100,
         d_radius: 150,
         array: []
