@@ -14,9 +14,20 @@
     <meta property="og:image" content="https://darickpascua.com/avatar.jpg"/>
     <meta property="og:description" content="Overengineer"/>
     <style>
+        @media screen and (max-width: 600px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
         body { 
             font-family: 'Berkeley Mono';
             padding: 6vh 5vw;
+        }
+
+        .dark {
+            background: #181724; 
+            color: #E0DEF4;
         }
 
         .cursor {
@@ -25,6 +36,13 @@
             background-color: #000;
             animation: blink 1s infinite steps(1);
         }
+
+        .dark a:link { color: lightskyblue; }
+        .dark a:visited { color: #C4A7E7; }
+        .dark a:hover { color: #ffffff; }
+        .dark a:active { color: #ff4040; text-decoration:none; font-weight:normal; }
+        .dark .cursor { background-color: #E0DEF4 }
+
         @keyframes blink {
             50% {
                 background-color: transparent;
@@ -60,7 +78,20 @@
         cursorElement.className = 'cursor';
         cursorElement.textContent = '\u00A0';
         let index = 0;
+        let clicks = 0;
         const typingSpeed = 100
+
+        const body = document.body
+
+        body.addEventListener('click', function() {
+            if (clicks > 3) {
+                body.classList.toggle('dark')
+                clicks = 0 
+            }
+
+            clicks++
+        })
+
 
         function type() {
             if (index < text.length) {
