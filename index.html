@@ -68,7 +68,9 @@
     </style>
   </head>
   <body>
-    <h3 id="console"></h3>
+    <h3 id="console">
+        Hello World!<br>I'm Darick Pascua.
+    </h3>
 
     <p>I am a software developer with a passion for coding, specializing in PHP, Go and Node.js.</p>
 
@@ -102,6 +104,9 @@
 
 
         function type() {
+            if (!index) {
+                terminalElement.innerHTML = "";
+            }
             if (index < text.length) {
                 const char = text.charAt(index);
 
